@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: scholara-dynamodb
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
+    networks:
+      - scholara-network
+
+  redis:
+    image: redis:alpine
+    container_name: scholara-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - scholara-network
+
+networks:
+  scholara-network:
+    driver: bridge
