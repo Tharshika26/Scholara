@@ -4,13 +4,13 @@
 
 Build "Scholara", a modern full-stack AI-powered Research Paper Management and Research Assistant platform. The platform will allow users to browse, purchase, download, and interact with research papers using an AI assistant (RAG architecture). It will also support paper uploads by users, an admin dashboard for moderation and analytics, and a robust microservices backend deployed on AWS.
 
-## User Review Required
+## Confirmed Architectural Decisions
 
 > [!IMPORTANT]
-> Please review the following architectural decisions before we proceed with the implementation:
-> 1. **Payment Gateway Integration**: The requirements mention a payment system but not a specific gateway. I propose using **Stripe** for handling payments. Let me know if you prefer another provider (e.g., PayPal, Razorpay).
-> 2. **OTP/Phone Verification Provider**: For phone number verification, I propose using **AWS SNS** or **Twilio**. Please let me know your preference or if you already have accounts set up.
-> 3. **AI Model Selection**: The request mentions OpenAI API / Gemini API. For the implementation, we can start with **Gemini API** as it's highly capable, but please confirm your choice and ensure API keys are available.
+> The following architectural decisions have been confirmed by the user:
+> 1. **Payment Gateway Integration**: **PayHere** will be used for handling payments.
+> 2. **OTP/Phone Verification Provider**: **AWS SNS** will be used for phone number verification.
+> 3. **AI Model Selection**: **OpenAI API** will be used as the primary LLM provider.
 
 ## Open Questions
 
